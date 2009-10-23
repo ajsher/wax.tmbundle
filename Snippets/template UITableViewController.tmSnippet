@@ -46,11 +46,7 @@ end</string>
 	<key>scope</key>
 	<string>source.lua</string>
 	<key>tabTrigger</key>
-<<<<<<< HEAD
 	<string>tableView</string>
-=======
-	<string>t.tableView</string>
->>>>>>> 8ea02f491317c6c600d8d700cb715030f6f55d2c
 	<key>uuid</key>
 	<string>C0265B87-4006-4760-931E-6C5DACA6F4E1</string>
 </dict>
