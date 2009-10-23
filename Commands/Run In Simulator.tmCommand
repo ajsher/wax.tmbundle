@@ -3,20 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>beforeRunningCommand</key>
-	<string>saveModifiedFiles</string>
+	<string>nop</string>
 	<key>command</key>
 	<string>WAX_TEST=1 "$TM_BUNDLE_PATH/Support/simplify/run"</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>@T</string>
+	<string>@R</string>
 	<key>name</key>
-	<string>Run Tests In Simulator</string>
+	<string>Run In Simulator</string>
 	<key>output</key>
 	<string>showAsTooltip</string>
 	<key>scope</key>
 	<string>source.lua</string>
 	<key>uuid</key>
-	<string>5F7A37FB-9F15-4334-8D9D-9EE29600D456</string>
+	<string>9B1622A4-1C4C-49BB-BFA0-644EE3B70C04</string>
 </dict>
 </plist>
