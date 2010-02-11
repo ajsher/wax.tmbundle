@@ -1,6 +1,6 @@
-require "#{ENV['TM_SUPPORT_PATH']}/lib/textmate"
-require "#{ENV['TM_SUPPORT_PATH']}/lib/ui"
-require "#{ENV['TM_SUPPORT_PATH']}/lib/exit_codes"
+require ENV['TM_SUPPORT_PATH'] + "/lib/textmate"
+require ENV['TM_SUPPORT_PATH'] + "/lib/ui"
+require ENV['TM_SUPPORT_PATH'] + "/lib/exit_codes"
 
 line = $stdin.read
 

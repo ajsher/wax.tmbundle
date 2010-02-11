@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>function init(self)
   self.super:init()
-  self.${2:objects} = ${0:[]}
+  self.${2:objects} = ${0:{}}
   return self
 end
 
@@ -30,8 +30,8 @@ function tableView_cellForRowAtIndexPath(self, tableView, indexPath)
                UI.TableViewCell:initWithStyle_reuseIdentifier(UITableViewCellStyleDefault, identifier)  
 
   -- cell:setAccessoryType(UITableViewCellAccessoryDisclosureIndicator)
-  -- local object = self.$2[indexPath:row() + 1]
-  -- cell:textLabel():setText(object["name"]) -- Must +1 because lua arrays are 1 based
+  -- local object = self.$2[indexPath:row() + 1] -- Must +1 because lua arrays are 1 based
+  -- cell:textLabel():setText(object["name"])
 
   return cell
 end
@@ -46,7 +46,7 @@ end</string>
 	<key>scope</key>
 	<string>source.lua</string>
 	<key>tabTrigger</key>
-	<string>tableView</string>
+	<string>tableview</string>
 	<key>uuid</key>
 	<string>C0265B87-4006-4760-931E-6C5DACA6F4E1</string>
 </dict>

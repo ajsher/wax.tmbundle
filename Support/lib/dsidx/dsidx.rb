@@ -1,9 +1,18 @@
-require "#{ENV['TM_SUPPORT_PATH']}/lib/textmate"
-require "#{ENV['TM_SUPPORT_PATH']}/lib/ui"
-require "#{ENV['TM_SUPPORT_PATH']}/lib/exit_codes"
+require ENV['TM_SUPPORT_PATH'] + "/lib/textmate"
+require ENV['TM_SUPPORT_PATH'] + "/lib/ui"
+require ENV['TM_SUPPORT_PATH'] + "/lib/exit_codes"
 
 require "rubygems"
-require "active_record" # Weird hack to get it to work in leopard
+active_record_libs = ["activerecord", "active_record"] # Weird hack to get it to work in leopard
+
+$:.reject! { |e| e.include? 'TextMate' } # TextMates builder screws things up!
+
+begin
+  require active_record_libs.pop
+rescue Exception => e
+  raise e if active_record_libs.empty?
+  retry
+end
 
 class Dsidx
   DOCUMENTATION_PATH = Dir["/Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/*.docset/Contents/Resources/docSet.dsidx"].last

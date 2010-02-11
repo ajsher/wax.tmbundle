@@ -7,6 +7,6 @@ class ObjcToLua
     lua_function.gsub!(/:\([^\)]+\)\s*(\w+)\s*/, "_") # replace :'s with _'s
     lua_function.gsub!(/_$/, "") # get rid of final _ if it exists
 
-    "function #{lua_function}(#{params.join(', ')})\nend\n"
+    "function #{lua_function}(self, #{params.join(', ')})\nend\n"
   end
 end

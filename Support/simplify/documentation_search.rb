@@ -1,8 +1,8 @@
-require "#{ENV['TM_SUPPORT_PATH']}/lib/textmate"
-require "#{ENV['TM_SUPPORT_PATH']}/lib/ui"
-require "#{ENV['TM_SUPPORT_PATH']}/lib/exit_codes"
+require ENV['TM_SUPPORT_PATH'] + "/lib/textmate"
+require ENV['TM_SUPPORT_PATH'] + "/lib/ui"
+require ENV['TM_SUPPORT_PATH'] + "/lib/exit_codes"
 
-require "wax/doc_set"
+require ENV['TM_BUNDLE_PATH'] + "/Support/lib/wax/doc_set"
 include Wax
 
 word = TextMate::UI.request_string(:prompt => "Search documentation for...", :button1 => "Search" )

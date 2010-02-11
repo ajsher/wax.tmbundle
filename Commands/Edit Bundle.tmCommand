@@ -5,18 +5,18 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>WAX_TEST=0 "$TM_BUNDLE_PATH/Support/simplify/run"</string>
+	<string>mate "$TM_BUNDLE_PATH"/*</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>@R</string>
+	<string>^!</string>
 	<key>name</key>
-	<string>Run In Simulator</string>
+	<string>Edit Bundle</string>
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>scope</key>
 	<string>source.lua</string>
 	<key>uuid</key>
-	<string>9B1622A4-1C4C-49BB-BFA0-644EE3B70C04</string>
+	<string>40C4BCF2-EAE4-4081-87A9-9A8A6B44D181</string>
 </dict>
 </plist>

@@ -1,4 +1,4 @@
-require "wax/doc_set"
+require ENV['TM_BUNDLE_PATH'] + "/Support/lib/wax/doc_set"
 
 module Wax
   Word = Struct.new(:raw, :query, :filters)

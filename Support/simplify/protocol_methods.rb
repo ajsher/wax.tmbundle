@@ -1,10 +1,10 @@
-require "#{ENV['TM_SUPPORT_PATH']}/lib/textmate"
-require "#{ENV['TM_SUPPORT_PATH']}/lib/ui"
-require "#{ENV['TM_SUPPORT_PATH']}/lib/exit_codes"
+require ENV['TM_SUPPORT_PATH'] + "/lib/textmate"
+require ENV['TM_SUPPORT_PATH'] + "/lib/ui"
+require ENV['TM_SUPPORT_PATH'] + "/lib/exit_codes"
 
-require "wax/current_word"
-require "wax/objc_to_lua"
-require "dsidx/dsidx"
+require ENV['TM_BUNDLE_PATH'] + "/Support/lib/wax/current_word"
+require ENV['TM_BUNDLE_PATH'] + "/Support/lib/wax/objc_to_lua"
+require ENV['TM_BUNDLE_PATH'] + "/Support/lib/dsidx/dsidx"
 
 include Wax
 
