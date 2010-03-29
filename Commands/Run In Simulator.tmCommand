@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>"$TM_BUNDLE_PATH/Support/simplify/run"</string>
+	<string>"$TM_BUNDLE_PATH/Support/lib/run"</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
@@ -13,7 +13,7 @@
 	<key>name</key>
 	<string>Run In Simulator</string>
 	<key>output</key>
-	<string>discard</string>
+	<string>showAsTooltip</string>
 	<key>scope</key>
 	<string>source.lua</string>
 	<key>uuid</key>
