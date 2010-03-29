@@ -5,20 +5,18 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>"$TM_BUNDLE_PATH/Support/lib/protocol-methods" </string>
-	<key>fallbackInput</key>
-	<string>none</string>
+	<string>"$TM_BUNDLE_PATH/Support/lib/objc-to-lua"</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>keyEquivalent</key>
-	<string>^P</string>
+	<string>^L</string>
 	<key>name</key>
-	<string>Protocol Methods</string>
+	<string>Objective-C to Lua</string>
 	<key>output</key>
 	<string>replaceSelectedText</string>
 	<key>scope</key>
 	<string>source.lua</string>
 	<key>uuid</key>
-	<string>FEF3F881-6DC9-4BD7-99A2-0F4EC167EE92</string>
+	<string>ADE3E707-681D-49AC-B6F1-2F493078FFAD</string>
 </dict>
 </plist>

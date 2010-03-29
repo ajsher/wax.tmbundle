@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>saveModifiedFiles</string>
 	<key>command</key>
-	<string>WAX_TEST=1 "$TM_BUNDLE_PATH/Support/simplify/run"</string>
+	<string>"$TM_BUNDLE_PATH/Support/simplify/run" test</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>

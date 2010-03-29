@@ -13,7 +13,7 @@
 	<key>name</key>
 	<string>Edit Bundle</string>
 	<key>output</key>
-	<string>showAsHTML</string>
+	<string>discard</string>
 	<key>scope</key>
 	<string>source.lua</string>
 	<key>uuid</key>

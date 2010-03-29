@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>saveActiveFile</string>
 	<key>command</key>
-	<string>${TM_RUBY:-ruby} "$TM_BUNDLE_PATH/Support/simplify.rb" validate</string>
+	<string>"$TM_BUNDLE_PATH/Support/lib/validate"</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>

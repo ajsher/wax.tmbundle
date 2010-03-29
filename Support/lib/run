@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+source "$TM_SUPPORT_PATH/lib/bash_init.sh"
+
+BUILD_PATH=$(dirname $TM_FILEPATH)
+
+while [[ -z $BUILD_FILE && $BUILD_PATH != "/" ]]; do
+    BUILD_FILE=$(find $BUILD_PATH -name '*.xcodeproj' -maxdepth 1)
+    BUILD_PATH=$(dirname $BUILD_PATH)
+done
+
+if [[ -z $BUILD_FILE ]]; then
+  echo "Couldn't find an xcode project file in directory"
+  exit 1
+fi
+
+BUILD_PATH=$(dirname $BUILD_FILE)
+
+esc () {
+STR="$1" ruby <<"RUBY"
+   str = ENV['STR']
+   str = str.gsub(/'/, "'\\\\''")
+   str = str.gsub(/[\\"]/, '\\\\\\0')
+   print "'#{str}'"
+RUBY
+}
+
+if [[ $1 == "test" ]]; then
+  RUN_CMD="rake test"
+else
+  RUN_CMD="rake run"
+fi;
+
+osascript <<- APPLESCRIPT
+  tell app "Terminal"
+      launch
+      activate
+      do script "clear; cd $(esc "${BUILD_PATH}"); $RUN_CMD"
+  end tell
+APPLESCRIPT

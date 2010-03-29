@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>${TM_RUBY:-ruby} "$TM_BUNDLE_PATH/Support/simplify.rb" objective-c_definition</string>
+	<string>"$TM_BUNDLE_PATH/Support/objc-definition"</string>
 	<key>fallbackInput</key>
 	<string>line</string>
 	<key>input</key>

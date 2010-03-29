@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>${TM_RUBY:-ruby} "$TM_BUNDLE_PATH/Support/simplify.rb" documentation</string>
+	<string>"$TM_BUNDLE_PATH/Support/lib/documentation"</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>keyEquivalent</key>

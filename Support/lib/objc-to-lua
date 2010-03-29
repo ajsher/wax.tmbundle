@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+line = $stdin.read
+
+line.match(/(\s*)
+            \[\s*
+            (\w+) # object
+            \s+
+            (.*)+ # messages
+            \s*\]\s*;?/xm)
+
+space = $1
+object = $2
+messageString = $3
+
+if (result = messageString.scan(/^\s*(\w+)\s*$/)).any?
+  messageString = $1 + "()"
+elsif result = messageString.scan(/(\w+):(?:(\w+)|@("[^"]+")|@\w+\(([^)]+)\))/)
+  messageString = result.map {|r| r[0]}.join("_") + "("
+  messageString += result.map {|r| r[1] or r[2] or "\"#{r[3]}\""}.join(", ") + ")"
+else
+  raise "Could not parse line"
+end
+
+puts "#{space}#{object}:#{messageString}"

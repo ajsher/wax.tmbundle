@@ -3,14 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>${1:"${2:a}"} = ${3:"${4:b}"}${5:,}</string>
-	<key>keyEquivalent</key>
-	<string>^T</string>
+	<string>luaClass{"${1:${TM_FILENAME/\.lua//}}"${2:, ${3:parentClassName}}}
+
+$0</string>
 	<key>name</key>
-	<string>Table Creation</string>
+	<string>luaClass</string>
 	<key>scope</key>
 	<string>source.lua</string>
+	<key>tabTrigger</key>
+	<string>luaClass</string>
 	<key>uuid</key>
-	<string>DE47D37C-7506-4051-8775-65BFBB3278BB</string>
+	<string>D6AC6FA2-8498-4D55-9597-5891A422CF97</string>
 </dict>
 </plist>

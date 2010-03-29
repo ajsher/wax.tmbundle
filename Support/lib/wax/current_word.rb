@@ -19,17 +19,13 @@ module Wax
       query = word.dup 
       filters = []
       case query
-      when /^[A-Z]{2,}\.\w+/ # Class
-        query.tr! ".", ""
-        query = (query =~ /:$/) ? query.chop : query + "*" # Wildcard!  
-        filters = [DocSet::CLASS]
       when /^[A-Z]{2,}\w+/ # Constants and protocols
         query += "*" # Wildcard!  
         
         if ENV['TM_SCOPE'] =~ /string\./i #inside strings, we usually only want classes or protocols          
           filters = [DocSet::PROTOCOL, DocSet::CLASS]
         else        
-          filters = [DocSet::PROTOCOL, DocSet::ENUM]
+          filters = [DocSet::CLASS, DocSet::PROTOCOL, DocSet::ENUM]
         end
       when /^(:|[a-z])/
         query.gsub!(/.*?:/, "")
