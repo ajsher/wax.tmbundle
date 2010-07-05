@@ -27,7 +27,7 @@ end
 function tableView_cellForRowAtIndexPath(self, tableView, indexPath)  
   local identifier = "${TM_FILENAME/\.lua//}Cell"
   local cell = tableView:dequeueReusableCellWithIdentifier(identifier) or
-               UI.TableViewCell:initWithStyle_reuseIdentifier(UITableViewCellStyleDefault, identifier)  
+               UITableViewCell:initWithStyle_reuseIdentifier(UITableViewCellStyleDefault, identifier)  
 
   -- cell:setAccessoryType(UITableViewCellAccessoryDisclosureIndicator)
   -- local object = self.$2[indexPath:row() + 1] -- Must +1 because lua arrays are 1 based

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>local ${1:my}Button = UIBarButtonItem:initWithTitle_style_target_action("$1", UIBarButtonItemStylePlain, self, "$1Touched:")
+self:navigationItem():set${2:Right}BarButtonItem($1Button)
+</string>
+	<key>name</key>
+	<string>BarButtonItem</string>
+	<key>scope</key>
+	<string>source.lua</string>
+	<key>tabTrigger</key>
+	<string>barbutton</string>
+	<key>uuid</key>
+	<string>421C255C-27F0-486F-AD0B-8A9F31DA68D3</string>
+</dict>
+</plist>

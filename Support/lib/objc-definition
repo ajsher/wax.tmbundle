@@ -15,6 +15,9 @@ method.gsub!(/\s*\([^\)]+\)\s*/, "")
 params = method.scan(/:(\w+)/).map {|o| o.first}
 
 method.gsub!(/:(\w+)\s*/, "_")
+
+method.gsub!(/\s*\{\s*/, "")
+
 method.chomp!("_")
 
 puts "function #{method}(self, #{params.join(', ')})\nend\n"
